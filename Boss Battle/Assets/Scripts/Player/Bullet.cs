@@ -12,9 +12,10 @@ public class Bullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb.velocity = transform.right * speed;
+		//Debug.Log(gameObject.name);
 	}
 
-	void OnTriggerEnter2D (Collider2D hitInfo)
+	void OnTriggerEnter2D(Collider2D hitInfo)
 	{
 		BossHealth enemy = hitInfo.GetComponent<BossHealth>();
 		if (enemy != null)
@@ -26,5 +27,5 @@ public class Bullet : MonoBehaviour {
 
 		Destroy(gameObject);
 	}
-	
+
 }
